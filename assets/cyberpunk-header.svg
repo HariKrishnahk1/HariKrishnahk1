@@ -1,0 +1,150 @@
+<svg width="100%" height="240" viewBox="0 0 1200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#080C16" />
+    </linearGradient>
+
+    <!-- Neon Glow Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="lineGradCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="lineGradPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#EC4899" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="240" fill="url(#bgGrad)" rx="12" />
+  
+  <!-- Outer Cyber Border -->
+  <rect x="1" y="1" width="1198" height="238" rx="12" fill="none" stroke="#1E293B" stroke-width="1.5" />
+  <rect x="2" y="2" width="1196" height="236" rx="11" fill="none" stroke="#00F0FF" stroke-opacity="0.15" stroke-width="1" />
+
+  <!-- Cyberpunk Top Accent Bar -->
+  <path d="M 0,12 Q 0,0 12,0 L 400,0 L 430,10 L 770,10 L 800,0 L 1188,0 Q 1200,0 1200,12" fill="none" stroke="#00F0FF" stroke-width="2" filter="url(#neonGlow)" />
+
+  <!-- Grid Perspective Lines (Subtle Cyber Floor) -->
+  <g stroke="#1E293B" stroke-width="0.75" opacity="0.6">
+    <line x1="0" y1="240" x2="600" y2="150" />
+    <line x1="200" y1="240" x2="600" y2="150" />
+    <line x1="400" y1="240" x2="600" y2="150" />
+    <line x1="800" y1="240" x2="600" y2="150" />
+    <line x1="1000" y1="240" x2="600" y2="150" />
+    <line x1="1200" y1="240" x2="600" y2="150" />
+    <line x1="100" y1="220" x2="1100" y2="220" />
+    <line x1="250" y1="190" x2="950" y2="190" />
+    <line x1="400" y1="170" x2="800" y2="170" />
+  </g>
+
+  <!-- Left Neural Network Synapses -->
+  <g stroke="#00F0FF" stroke-width="1.2" opacity="0.7">
+    <line x1="60" y1="60" x2="140" y2="100" stroke="url(#lineGradCyan)" />
+    <line x1="140" y1="100" x2="80" y2="170" stroke="url(#lineGradCyan)" />
+    <line x1="140" y1="100" x2="220" y2="70" stroke="url(#lineGradCyan)" />
+    <line x1="220" y1="70" x2="290" y2="120" stroke="url(#lineGradCyan)" />
+    <line x1="80" y1="170" x2="180" y2="190" stroke="url(#lineGradCyan)" />
+    <line x1="180" y1="190" x2="290" y2="120" stroke="url(#lineGradCyan)" />
+    <line x1="220" y1="70" x2="160" y2="30" stroke="url(#lineGradCyan)" />
+    <line x1="60" y1="60" x2="160" y2="30" stroke="url(#lineGradCyan)" />
+  </g>
+
+  <!-- Left Neural Nodes -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="60" cy="60" r="4" fill="#00F0FF" />
+    <circle cx="160" cy="30" r="3" fill="#A855F7" />
+    <circle cx="140" cy="100" r="6" fill="#00F0FF" />
+    <circle cx="80" cy="170" r="4.5" fill="#38BDF8" />
+    <circle cx="220" cy="70" r="5" fill="#A855F7" />
+    <circle cx="180" cy="190" r="3.5" fill="#00F0FF" />
+    <circle cx="290" cy="120" r="5.5" fill="#EC4899" />
+  </g>
+
+  <!-- Right Neural Network Synapses -->
+  <g stroke="#A855F7" stroke-width="1.2" opacity="0.7">
+    <line x1="1140" y1="60" x2="1060" y2="100" stroke="url(#lineGradPurple)" />
+    <line x1="1060" y1="100" x2="1120" y2="170" stroke="url(#lineGradPurple)" />
+    <line x1="1060" y1="100" x2="980" y2="70" stroke="url(#lineGradPurple)" />
+    <line x1="980" y1="70" x2="910" y2="120" stroke="url(#lineGradPurple)" />
+    <line x1="1120" y1="170" x2="1020" y2="190" stroke="url(#lineGradPurple)" />
+    <line x1="1020" y1="190" x2="910" y2="120" stroke="url(#lineGradPurple)" />
+    <line x1="980" y1="70" x2="1040" y2="30" stroke="url(#lineGradPurple)" />
+    <line x1="1140" y1="60" x2="1040" y2="30" stroke="url(#lineGradPurple)" />
+  </g>
+
+  <!-- Right Neural Nodes -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="1140" cy="60" r="4" fill="#EC4899" />
+    <circle cx="1040" cy="30" r="3" fill="#A855F7" />
+    <circle cx="1060" cy="100" r="6" fill="#A855F7" />
+    <circle cx="1120" cy="170" r="4.5" fill="#00F0FF" />
+    <circle cx="980" cy="70" r="5" fill="#38BDF8" />
+    <circle cx="1020" cy="190" r="3.5" fill="#A855F7" />
+    <circle cx="910" cy="120" r="5.5" fill="#00F0FF" />
+  </g>
+
+  <!-- Center Floating Digital Data Rings -->
+  <circle cx="600" cy="105" r="75" stroke="#00F0FF" stroke-width="0.75" stroke-dasharray="4 6" opacity="0.4" />
+  <circle cx="600" cy="105" r="90" stroke="#A855F7" stroke-width="0.75" stroke-dasharray="6 8" opacity="0.3" />
+
+  <!-- Center Typography & Cyber Badge -->
+  <g text-anchor="middle">
+    <!-- Top System Tag -->
+    <rect x="495" y="32" width="210" height="24" rx="12" fill="#0D1117" stroke="#00F0FF" stroke-width="1" />
+    <text x="600" y="48" font-family="'Courier New', monospace" font-size="11" font-weight="700" fill="#00F0FF" letter-spacing="2">
+      // NEURAL INTERFACE ONLINE
+    </text>
+
+    <!-- Main Title -->
+    <text x="600" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="url(#textGrad)" letter-spacing="3" filter="url(#neonGlow)">
+      HARI KRISHNA DK
+    </text>
+
+    <!-- Subtitle / Identity -->
+    <text x="600" y="148" font-family="'Courier New', monospace" font-size="14" font-weight="600" fill="#94A3B8" letter-spacing="2">
+      AI &amp; DATA SCIENCE • COMPUTER VISION • SYSTEM ARCHITECTURE
+    </text>
+
+    <!-- Location & Status Pills -->
+    <text x="600" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748B">
+      📍 Karur, Tamil Nadu, India  |  🏛️ V.S.B. Engineering College  |  ⚡ Building For Real-World Impact
+    </text>
+  </g>
+
+  <!-- Corner Tech Accents -->
+  <path d="M 20,40 L 20,20 L 40,20" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 1180,40 L 1180,20 L 1160,20" fill="none" stroke="#A855F7" stroke-width="2" />
+  <path d="M 20,200 L 20,220 L 40,220" fill="none" stroke="#00F0FF" stroke-width="2" />
+  <path d="M 1180,200 L 1180,220 L 1160,220" fill="none" stroke="#A855F7" stroke-width="2" />
+</svg>
